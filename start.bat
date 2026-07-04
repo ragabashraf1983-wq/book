@@ -18,6 +18,8 @@ echo [1/2] Checking dependencies...
 pip install -r requirements.txt --quiet
 
 echo [2/2] Starting the application...
+:: Set PYTHONPATH to the current directory so Python can find the book_fabric package
+set PYTHONPATH=%CD%
 streamlit run book_fabric/ui/streamlit_app.py
 
 if %errorlevel% neq 0 (
