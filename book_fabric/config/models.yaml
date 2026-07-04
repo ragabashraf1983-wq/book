@@ -1,0 +1,15 @@
+providers:
+  - name: "9router"
+    endpoint: "https://api.9router.ai" # Default, can be changed to local/tunnel/tailscale in .env
+    api_key_env: "NINEROUTER_API_KEY"
+    models:
+      - id: "gpt-4o"
+        role: "planning"
+      - id: "claude-3-5-sonnet"
+        role: "writing"
+      - id: "gpt-4o"
+        role: "review"
+      - id: "qwen-2.5-72b"
+        role: "extraction"
+      - id: "gpt-4o-mini"
+        role: "fallback"
